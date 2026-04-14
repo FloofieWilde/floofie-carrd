@@ -1,0 +1,29 @@
+{
+    "background": "https://static.vecteezy.com/system/resources/previews/001/828/920/non_2x/modern-orange-purple-abstract-background-vector.jpg",
+    "title": "Floofie",
+    "subtitle": "The Aura Bard",
+    "pfp": "'./pfp/Floofie Bard pfp.png'",
+    "description": "Just a Bard coming from Sinnoh, nothing else to see or know, no idea why they are talking about a Prince Lucario.",
+    "commissionsStatus": "Open",
+    "links": [
+        {
+            "title": "Commissions - Trello",
+            "icon": "FaTrello",
+            "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets"
+        },
+        {
+            "title": "Fur Affinity",
+            "icon": "./icons/Furaff.svg",
+            "link": "https://www.furaffinity.net/gallery/prince-lucario/"
+        }
+    ],
+    "theme": {
+        "primary": "#4aaecc",
+        "secondary": "#c143c0",
+        "background-scrap": "rgba(0, 0, 0, 0.7)",
+        "background": "#dbd1db",
+        "text": "rgba(0, 0, 0, 0.7)",
+        "accent": "#4aaecc",
+        "accentSecondary": "#c143c0"
+    }
+}
