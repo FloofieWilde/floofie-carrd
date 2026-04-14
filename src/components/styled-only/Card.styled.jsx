@@ -12,8 +12,14 @@ const SCard = styled.div`
     align-items: center;
     background-color: ${config.theme.background};
     color: ${config.theme.text};
-    box-shadow: 8px 8px ${config.theme.primary}, 16px 16px ${config.theme.secondary};
     border-radius: 20px;
+
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        transition: all ease-in-out .15s;
+        box-shadow: 8px 8px ${config.theme.primary}, 16px 16px ${config.theme.secondary};
+    }
 `
 
 export default SCard;
