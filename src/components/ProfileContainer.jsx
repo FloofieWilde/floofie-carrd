@@ -16,11 +16,12 @@ const ProfileContainer = () => {
 }
 
 const SProfile = styled.div`
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
 `
 
 const SName = styled.span`
@@ -39,7 +40,7 @@ const SSubtitle = styled.span`
 const SNameGroup = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 `
 
 const SDescription = styled.span`

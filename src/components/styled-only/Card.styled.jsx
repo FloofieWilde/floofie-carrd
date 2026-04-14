@@ -20,6 +20,10 @@ const SCard = styled.div`
         transition: all ease-in-out .15s;
         box-shadow: 8px 8px ${config.theme.primary}, 16px 16px ${config.theme.secondary};
     }
+
+    @media (pointer:coarse) {
+        box-shadow: 8px 8px ${config.theme.primary}, 16px 16px ${config.theme.secondary};
+    }
 `
 
 export default SCard;
