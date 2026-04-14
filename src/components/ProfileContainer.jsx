@@ -8,9 +8,10 @@ const ProfileContainer = () => {
             <SPfP />
             <SNameGroup>
                 <SName>{config.title}</SName>
-                <SSubtitle>{config.subtitle}</SSubtitle>
+                {config.subtitle && <SSubtitle>{config.subtitle}</SSubtitle>}
+                {config.quote && <SQuote>"{config.quote}"</SQuote>}
             </SNameGroup>
-            <SDescription>{config.description}</SDescription>
+            {config.description && <SDescription>{config.description}</SDescription>}
         </SProfile>
     )
 }
@@ -43,8 +44,11 @@ const SNameGroup = styled.div`
     margin-bottom: 8px;
 `
 
-const SDescription = styled.span`
+const SQuote = styled.span`
     font-style: italic;
+`
+
+const SDescription = styled.span`
 `
 
 export default ProfileContainer
