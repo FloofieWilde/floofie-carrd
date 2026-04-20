@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { getIcon } from "../services/icon.service";
 import { Tooltip } from "react-tooltip";
 import config from "../config.json"
-import SvgIcon from "./SvgIcon";
 import { ReactSVG } from "react-svg";
 
 const LinkIcon = ({ item }) => {
