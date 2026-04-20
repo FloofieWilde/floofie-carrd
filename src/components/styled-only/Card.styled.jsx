@@ -13,6 +13,7 @@ const SCard = styled.div`
     background-color: ${config.theme.background};
     color: ${config.theme.text};
     border-radius: 20px;
+    gap: 20px;
 
     transition: all ease-in-out .3s;
 

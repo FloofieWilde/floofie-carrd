@@ -6,16 +6,20 @@
     "description": "Just a Bard coming from Sinnoh, nothing else to see or know, no idea why they are talking about a Prince Lucario.",
     "quote": "Floofie, fourre ta truffe !",
     "commissionsStatus": "Open",
+    "globalIconColor": "#4aaecc",
+    "globalIconHoverColor": "#c143c0",
     "links": [
         {
             "title": "Commissions - Trello",
             "icon": "FaTrello",
-            "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets"
+            "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets",
+            "color": "blue"
         },
         {
             "title": "Fur Affinity",
-            "icon": "./icons/Furaff.svg",
-            "link": "https://www.furaffinity.net/gallery/prince-lucario/"
+            "icon": "CuFuraff",
+            "link": "https://www.furaffinity.net/gallery/prince-lucario/",
+            "color": "#eb9001"
         }
     ],
     "theme": {
