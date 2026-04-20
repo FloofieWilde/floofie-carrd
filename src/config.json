@@ -20,6 +20,22 @@
             "icon": "CuFuraff",
             "link": "https://www.furaffinity.net/gallery/prince-lucario/",
             "color": "#eb9001"
+        },
+        {
+            "title": "Floofie Wilde - Twitter",
+            "icon": "FaTwitter",
+            "link": "https://x.com/FloofieWilde"
+        },
+        {
+            "title": "Prince Lucario - Special Twitter",
+            "icon": "BsTwitterX",
+            "link": "https://x.com/Prince_Lucario",
+            "color": "black"
+        },
+        {
+            "title": "Github - Floofie Wilde",
+            "icon": "FaGithub",
+            "link": "https://github.com/FloofieWilde"
         }
     ],
     "theme": {

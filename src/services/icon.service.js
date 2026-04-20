@@ -3,6 +3,7 @@ import * as MdIcons from "react-icons/md";
 import * as IoIcons from "react-icons/io";
 import * as GiIcons from "react-icons/gi";
 import * as HiIcons from "react-icons/hi";
+import * as BsIcons from "react-icons/bs";
 
 const iconPacks = {
     Fa: FaIcons,
@@ -10,6 +11,7 @@ const iconPacks = {
     Io: IoIcons,
     Gi: GiIcons,
     Hi: HiIcons,
+    Bs: BsIcons,
 };
 
 export function getIcon(iconName) {

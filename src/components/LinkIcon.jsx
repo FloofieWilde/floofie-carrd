@@ -8,7 +8,7 @@ const LinkIcon = ({ item }) => {
     const Icon = getIcon(item.icon);
 
     return (
-        <SLinkIcon href={item.link} data-tooltip-id={'tt' + item.icon} data-tooltip-content={item.title}>
+        <SLinkIcon href={item.link} target="_blank" data-tooltip-id={'tt' + item.icon} data-tooltip-content={item.title}>
             {Icon && !(typeof Icon === "string") && <Icon alt={item.title} style={{ color: item.color }} />}
             {Icon && typeof Icon === "string" && <ReactSVG src={Icon} style={{ color: item.color }} />}
             {!Icon && <SImgIcon src={item.icon} alt={item.title} />}
@@ -20,7 +20,9 @@ const LinkIcon = ({ item }) => {
 const SLinkIcon = styled.a`
 
     color: ${config.globalIconColor ?? 'black'};
-
+    height: auto;
+    width: auto;
+    
     :hover {
         color: ${config?.globalIconHoverColor ?? undefined};
         transition: all ease-in-out .1s;
