@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Floofie Carrd like project 
+-# (I definetely have to find a better name)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+**This badly named project** is a open source **visit card** project with json customisation.  
+It helps people and mostly ~~furries~~ artists having online visibility with links to all their socials. 
 
-## Available Scripts
+**Goal:**  
+Create a self hosted and easily customisable numeric visit card 
 
-In the project directory, you can run:
+**Target audience:**  
+Furries. Uh no artists. Mostly.
 
-### `npm start`
+## Tech Stack
+- **Frontend:** React + Styled Components  
+- **Main Libraries:** WIP
+- Instanciated using CRA, yes I'm dissident event tho CRA project has been sunsetted
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+Since this is currently WIP, you can try the beta by dowloading the source code, modifying config.json, and building the app (npm build).
+It supports icon addition and almost complete customisation. 
+The objective is to allow multi profile and other bullshit in the future.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## This is mostly my own project (for now)
+If you read this code and think: "who wrote this mess?"
+It may be:
+- a bug
+- a night too short
+- or a mix of both.
 
-### `npm test`
+Pull requests are welcome.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Totally Serious Legal-ish Stuff (Not Really)
+By using, reading, deploying, modifying, or simply staring intensely at this repository, you agree to the following extremely important terms:
+- If you ever meet the creator of this app in the wild, you are encouraged (but not legally required) to buy him a beer or a whisky.
+- You may also politely request a hug. The creator reserves the absolute and unquestionable right to accept or refuse, though statistically speaking the chances of acceptance are fairly high.
+- Please avoid unnecessary drama. Life is already complicated enough.
+- Be kind to each other.
+- Do what you want, I'm not your dad (but might become your daddy).
+- Coffee is love, coffee is life. No argue is necessary.
+- Support artists — if you enjoy art, commission an artist when you can.
+- Stay curious, stay creative, and above all: Remain fluffy. 🐾
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_No lawyers were harmed in the making of these terms._
