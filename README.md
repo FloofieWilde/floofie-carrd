@@ -1,5 +1,5 @@
 # Floofie Carrd like project 
--# (I definetely have to find a better name)
+(I definetely have to find a better name)
 
 ## Description
 **This badly named project** is a open source **visit card** project with json customisation.  
