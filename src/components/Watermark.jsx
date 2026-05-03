@@ -1,9 +1,16 @@
 import React from 'react'
+import { FaLink } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const Watermark = () => {
     return (
-        <SWatermark>Made with ❤️ and ☕, by <a href="https://github.com/FloofieWilde" target='_blank' rel="noreferrer">Floofie Wilde</a></SWatermark>
+        <SWatermark>
+            Made with ❤️ and ☕, by <a href="https://github.com/FloofieWilde" target='_blank' rel="noreferrer">Floofie Wilde</a>.
+            &nbsp;
+            <a href='https://github.com/FloofieWilde/floofie-carrd' target='_blank' rel="noreferrer">
+                Want yours ? {/* <FaLink/> */}
+            </a> 
+            </SWatermark>
     )
 }
 
