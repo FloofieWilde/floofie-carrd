@@ -1,6 +1,7 @@
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import * as IoIcons from "react-icons/io";
+import * as Io5Icons from "react-icons/io5";
 import * as GiIcons from "react-icons/gi";
 import * as HiIcons from "react-icons/hi";
 import * as BsIcons from "react-icons/bs";
@@ -9,7 +10,7 @@ import * as SiIcons8 from "react-icons/si";
 const iconPacks = {
     Fa: FaIcons,
     Md: MdIcons,
-    Io: IoIcons,
+    Io: IoIcons && Io5Icons,
     Gi: GiIcons,
     Hi: HiIcons,
     Bs: BsIcons,
