@@ -23,7 +23,9 @@ const SCard = styled.div`
     }
 
     @media (pointer:coarse) {
+        padding: 20px 30px;
         box-shadow: 8px 8px ${config.theme.primary}, 16px 16px ${config.theme.secondary};
+        max-width: 90vw;
     }
 `
 
