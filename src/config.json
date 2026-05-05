@@ -10,10 +10,40 @@
     "globalIconHoverColor": "#c143c0",
     "links": [
         {
+            "title": "Discord - Floofie Wilde",
+            "icon": "FaDiscord",
+            "link": "https://discordapp.com/users/221994992346988544/",
+            "color": "#5765f2"
+        },
+        {
+            "title": "Discord - La Taverne",
+            "icon": "FaDiscord",
+            "link": "https://discord.com/invite/uZR2mfFch7",
+            "color": "#5765f2"
+        },
+        {
+            "title": "Telegram",
+            "icon": "FaTelegramPlane",
+            "link": "https://telegram.me/princelucario",
+            "color": "#20a4e5"
+        },
+        {
             "title": "Commissions - Trello",
             "icon": "FaTrello",
             "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets",
             "color": "blue"
+        },
+        {
+            "title": "VrChat",
+            "icon": "SiVrchat",
+            "link": "https://vrchat.com/home/user/usr_1340fed8-82b0-4bfd-bca7-00f9dff46d6d",
+            "color": "black"
+        },
+        {
+            "title": "Twitch",
+            "icon": "FaTwitch",
+            "link": "https://twitch.tv/floofiewilde",
+            "color": "#9c59ff"
         },
         {
             "title": "Fur Affinity",
@@ -22,9 +52,22 @@
             "color": "#eb9001"
         },
         {
+            "title": "Barq",
+            "icon": "CuBarq",
+            "link": "https://barq.app/@floofie",
+            "color": "#f76701"
+        },
+        {
             "title": "Floofie Wilde - Twitter",
             "icon": "FaTwitter",
-            "link": "https://x.com/FloofieWilde"
+            "link": "https://x.com/FloofieWilde",
+            "color": "#1e9de8"
+        },
+        {
+            "title": "Floofie Wilde - Bluesky",
+            "icon": "BsBluesky",
+            "link": "https://bsky.app/profile/floofiewilde.bsky.social",
+            "color": "#1082f6"
         },
         {
             "title": "Prince Lucario - Special Twitter",
@@ -33,9 +76,16 @@
             "color": "black"
         },
         {
+            "title": "Tiktok - Soon to be used",
+            "icon": "FaTiktok",
+            "link": "https://www.tiktok.com/@floofiewilde",
+            "color": "#364650"
+        },
+        {
             "title": "Github - Floofie Wilde",
             "icon": "FaGithub",
-            "link": "https://github.com/FloofieWilde"
+            "link": "https://github.com/FloofieWilde",
+            "color": "#6a2d86"
         }
     ],
     "theme": {

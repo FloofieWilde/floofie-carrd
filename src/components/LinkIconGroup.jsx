@@ -17,7 +17,12 @@ const LinkIconGroup = () => {
 
 const SIconGroup = styled.div`
     display: flex;
-    gap: 4px;
+    column-gap: 8px;
+    row-gap: 4px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1;
 `
 
 export default LinkIconGroup
