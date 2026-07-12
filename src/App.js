@@ -6,6 +6,7 @@ import LinkIconGroup from './components/LinkIconGroup';
 import Watermark from './components/Watermark';
 import config from './config.json'
 import MulticlickButtonWrapper from './components/MulticlickButtonWrapper';
+import DiscordProfileWidget from './components/DiscordProfileWidget';
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
         <ProfileContainer />
         <LinkIconGroup />
         <MulticlickButtonWrapper />
+        <DiscordProfileWidget />
       </SCard>
       <Watermark />
     </SMainContainer>

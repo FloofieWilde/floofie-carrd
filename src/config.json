@@ -8,6 +8,9 @@
     "commissionsStatus": "1",
     "globalIconColor": "#4aaecc",
     "globalIconHoverColor": "#c143c0",
+    "discord": "",
+    "discordServer": "",
+    "discordBotToken": "",
     "links": [
         {
             "title": "Discord - Floofie Wilde",
