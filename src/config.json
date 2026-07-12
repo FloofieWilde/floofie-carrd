@@ -5,7 +5,7 @@
     "pfp": "'./pfp/Floofie Bard pfp.png'",
     "description": "Just a Bard coming from Sinnoh, nothing else to see or know, no idea why they are talking about a Prince Lucario.",
     "quote": "Floofie, fourre ta truffe !",
-    "commissionsStatus": "Open",
+    "commissionsStatus": "1",
     "globalIconColor": "#4aaecc",
     "globalIconHoverColor": "#c143c0",
     "links": [
@@ -86,6 +86,42 @@
             "icon": "FaGithub",
             "link": "https://github.com/FloofieWilde",
             "color": "#6a2d86"
+        }
+    ],
+    "buttons": [
+        {
+            "title": "Commissions",
+            "icon": "FaTrello",
+            "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets",
+            "bgColor": "blue",
+            "textColor": "white",
+            "type": "link"
+        },
+        {
+            "title": "Refsheets",
+            "icon": "FaBook",
+            "multi" : [
+                {
+                    "title": "Floofie",
+                    "link": "/refs/Floofie.jpg",
+                    "type": "image"
+                },
+                {
+                    "title": "Canis Cosmos",
+                    "link": "/refs/Canis_Cosmos.png",
+                    "type": "image"
+                },
+                {
+                    "title": "Canis Genesis",
+                    "link": "/refs/Canis_Genesis.png",
+                    "type": "image"
+                },
+                {
+                    "title": "FloofiXel",
+                    "link": "/refs/FloofiXel.png",
+                    "type": "image"
+                }
+            ]
         }
     ],
     "theme": {

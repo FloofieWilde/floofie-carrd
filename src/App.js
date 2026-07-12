@@ -5,6 +5,7 @@ import ProfileContainer from './components/ProfileContainer';
 import LinkIconGroup from './components/LinkIconGroup';
 import Watermark from './components/Watermark';
 import config from './config.json'
+import MulticlickButtonWrapper from './components/MulticlickButtonWrapper';
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
       <SCard>
         <ProfileContainer />
         <LinkIconGroup />
+        <MulticlickButtonWrapper />
       </SCard>
       <Watermark />
     </SMainContainer>
