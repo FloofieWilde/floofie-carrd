@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import SPfP from "./styled-only/PfP.styled"
 import config from "../config.json"
+import CommissionTag from "./CommissionTag"
 
 const ProfileContainer = () => {
     return (
@@ -10,6 +11,7 @@ const ProfileContainer = () => {
                 <SName>{config.title}</SName>
                 {config.subtitle && <SSubtitle>{config.subtitle}</SSubtitle>}
                 {config.quote && <SQuote>"{config.quote}"</SQuote>}
+                {config.commissionsStatus && <CommissionTag status={config.commissionsStatus} />}
             </SNameGroup>
             {config.description && <SDescription>{config.description}</SDescription>}
         </SProfile>
