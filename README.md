@@ -17,7 +17,8 @@ Furries. Uh no artists. Mostly.
 - Instanciated using CRA, yes I'm dissident event tho CRA project has been sunsetted
 
 ## Usage
-Since this is currently WIP, you can try the beta by dowloading the source code, modifying config.json, and building the app (npm build).
+You need node.js to run this project (for now).
+Since this is currently WIP, you can try the beta by dowloading the source code, running `npm i`, `npm run start` to see live modifications, modifying `config.json`, and building the app (`npm build`).
 It supports icon addition and almost complete customisation. 
 The objective is to allow multi profile and other bullshit in the future.
 
