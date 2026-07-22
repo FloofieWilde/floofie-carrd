@@ -7,11 +7,25 @@ const MulticlickButton = ({ item, defaultColor, defaultTextColor, onOpenModal })
   const renderEntry = (entry, key, withIcon = false) => {
     const isModalEntry = isModalType(entry?.type)
     const isImageEntry = isImageType(entry?.type)
-    const isLinkEntry = Boolean(entry?.link)
-    const isActionable = isModalEntry || isImageEntry || isLinkEntry
 
-    const entryContent = (
-      <>
+    if (isModalEntry || isImageEntry) {
+      return (
+        <button key={key} type="button" onClick={() => onOpenModal?.(entry)}>
+          {
+            withIcon && entry?.icon ? (
+              <LinkIcon item={{
+                icon: entry.icon,
+                color: entry?.textColor || defaultTextColor
+              }} />
+            ) : null
+          }
+          {entry?.title}
+        </button>
+      )
+    }
+
+    return (
+      <a key={key} className={entry?.link ? 'link' : ''} href={entry?.link} target="_blank" rel="noreferrer">
         {
           withIcon && entry?.icon ? (
             <LinkIcon item={{
@@ -21,24 +35,6 @@ const MulticlickButton = ({ item, defaultColor, defaultTextColor, onOpenModal })
           ) : null
         }
         {entry?.title}
-      </>
-    )
-
-    if (isModalEntry || isImageEntry) {
-      return (
-        <button key={key} type="button" className="is-actionable" onClick={() => onOpenModal?.(entry)}>
-          {entryContent}
-        </button>
-      )
-    }
-
-    if (!isActionable) {
-      return <span key={key}>{entryContent}</span>
-    }
-
-    return (
-      <a key={key} className="link is-actionable" href={entry?.link} target="_blank" rel="noreferrer">
-        {entryContent}
       </a>
     )
   }
@@ -60,7 +56,7 @@ const MulticlickButton = ({ item, defaultColor, defaultTextColor, onOpenModal })
 
 const SMulticlickButton = styled.div`
     display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
     gap:4px;
     color: ${props => props.textColor || 'black'};
     border-radius: 50px;
@@ -82,18 +78,13 @@ const SMulticlickButton = styled.div`
       gap: 4px;
       height: 100%;
     box-sizing: border-box;
-      cursor: default;
 
       text-decoration: none;
       color: ${props => props.textColor || 'black'};
-    }
-
-    >*.is-actionable {
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
 
       &:hover {
         filter: brightness(1.1);
+        transition: all 0.2s ease-in-out;
       }
     }
 
@@ -105,14 +96,6 @@ const SMulticlickButton = styled.div`
     >:last-child {
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
-    }
-
-    @media (max-width: 720px) {
-      justify-content: center;
-
-      >* {
-        border-radius: 16px;
-      }
     }
 `
 
