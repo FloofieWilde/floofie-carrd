@@ -3,12 +3,22 @@ import config from "../config.json"
 import styled from 'styled-components';
 import MulticlickButton from './MulticlickButton';
 
-const MulticlickButtonWrapper = () => {
+const MulticlickButtonWrapper = ({ onOpenModal }) => {
   return (
     <SMulticlickButtonWrapper>
         {
            config?.buttons?.map(
-                (button) => { return <MulticlickButton item={button} defaultColor={config.globalIconColor || 'white'} defaultTextColor={config.globalIconTextColor || 'black'} /> }
+                (button, index) => {
+                  return (
+                    <MulticlickButton
+                      key={`${button?.title || 'button'}-${index}`}
+                      item={button}
+                      defaultColor={config.globalIconColor || 'white'}
+                      defaultTextColor={config.globalIconTextColor || 'black'}
+                      onOpenModal={onOpenModal}
+                    />
+                  )
+                }
             )
         }
     </SMulticlickButtonWrapper>

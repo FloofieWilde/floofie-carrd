@@ -1,27 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
 import LinkIcon from './LinkIcon'
+import { isModalType } from '../services/modal.service'
 
-const MulticlickButton = ({item, defaultColor, defaultTextColor}) => {
+const MulticlickButton = ({ item, defaultColor, defaultTextColor, onOpenModal }) => {
+  const renderEntry = (entry, key, withIcon = false) => {
+    const isModalEntry = isModalType(entry?.type)
+
+    if (isModalEntry) {
+      return (
+        <button key={key} type="button" onClick={() => onOpenModal?.(entry)}>
+          {
+            withIcon && entry?.icon ? (
+              <LinkIcon item={{
+                icon: entry.icon,
+                color: entry?.textColor || defaultTextColor
+              }} />
+            ) : null
+          }
+          {entry?.title}
+        </button>
+      )
+    }
+
+    return (
+      <a key={key} className={entry?.link ? 'link' : ''} href={entry?.link} target="_blank" rel="noreferrer">
+        {
+          withIcon && entry?.icon ? (
+            <LinkIcon item={{
+              icon: entry.icon,
+              color: entry?.textColor || defaultTextColor
+            }} />
+          ) : null
+        }
+        {entry?.title}
+      </a>
+    )
+  }
+
   return (
     <SMulticlickButton bgColor={item?.bgColor || defaultColor} textColor={item?.textColor || defaultTextColor}>
-      <a className={item?.link && "link"} href={item?.link} target='_blank' rel="noreferrer">
-        { item?.icon && <LinkIcon item={{
-          icon: item.icon,
-          color: item?.textColor || defaultTextColor
-        }} /> }
-        {item?.title}
-      </a>
+      {renderEntry(item, item?.title || 'main-item', true)}
 
       {
         item?.multi?.map(
           (subItem, index) => {
-            return (
-              <a key={index} className={subItem?.link && "link"} href={subItem
-                ?.link} target='_blank' rel="noreferrer">
-                {subItem?.title}
-              </a>
-            )
+            return renderEntry(subItem, `${subItem?.title || 'sub-item'}-${index}`)
           }
         )
       }
@@ -43,6 +67,8 @@ const SMulticlickButton = styled.div`
     >* {
       padding: 5px 10px;
       background-color: ${props => props.bgColor || 'white'};
+      border: none;
+      font: inherit;
 
       display: flex;
       align-items: center;

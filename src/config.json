@@ -95,7 +95,12 @@
             "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets",
             "bgColor": "blue",
             "textColor": "white",
-            "type": "link"
+            "type": "link",
+            "multi": [{
+                "title": "Terms of service",
+                "component": "TemporaryTOSModal",
+                "type": "component"
+            }]
         },
         {
             "title": "Refsheets",
