@@ -77,15 +77,21 @@ const SMulticlickButton = styled.div`
       justify-content: center;
       gap: 4px;
       height: 100%;
-    box-sizing: border-box;
+      box-sizing: border-box;
 
       text-decoration: none;
       color: ${props => props.textColor || 'black'};
 
+      
+    }
+
+    >button,
+    >a.link {
       &:hover {
-        filter: brightness(1.1);
+        filter: brightness(.9);
         transition: all 0.2s ease-in-out;
       }
+      cursor: pointer;
     }
 
     >:first-child {
