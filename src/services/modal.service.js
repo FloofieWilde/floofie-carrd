@@ -1,8 +1,23 @@
-import TemporaryTOSModal from '../components/custom/TemporaryTOSModal'
+const buildModalRegistry = () => {
+  const registry = {}
 
-const MODAL_REGISTRY = {
-  TemporaryTOSModal
+  // Auto-register every component inside src/components/custom.
+  const customComponentContext = require.context('../components/custom', true, /\.(js|jsx)$/)
+
+  customComponentContext.keys().forEach((key) => {
+    const module = customComponentContext(key)
+    const component = module?.default
+    if (!component) return
+
+    const fileName = key.replace('./', '')
+    const componentName = fileName.replace(/\.(js|jsx)$/, '')
+    registry[componentName] = component
+  })
+
+  return registry
 }
+
+const MODAL_REGISTRY = buildModalRegistry()
 
 const MODAL_TYPES = new Set(['modal', 'component'])
 
@@ -25,3 +40,5 @@ export const getModalConfig = (item) => {
     ModalComponent
   }
 }
+
+export const getRegisteredModalNames = () => Object.keys(MODAL_REGISTRY)
