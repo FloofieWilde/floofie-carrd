@@ -2,18 +2,28 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import config from '../config.json'
 import MulticlickButtonWrapper from './MulticlickButtonWrapper'
-import { getModalConfig } from '../services/modal.service'
+import { getImageConfig, getModalConfig } from '../services/modal.service'
 
 const ModalLoaderComponent = () => {
   const [activeModal, setActiveModal] = useState(null)
 
   const openModalFromButton = (item) => {
     const resolvedModal = getModalConfig(item)
-    if (!resolvedModal) return
+    if (resolvedModal) {
+      setActiveModal({
+        type: 'component',
+        ...resolvedModal,
+        title: item?.title || 'Modal'
+      })
+      return
+    }
+
+    const resolvedImage = getImageConfig(item)
+    if (!resolvedImage) return
 
     setActiveModal({
-      ...resolvedModal,
-      title: item?.title || 'Modal'
+      type: 'image',
+      ...resolvedImage
     })
   }
 
@@ -22,9 +32,10 @@ const ModalLoaderComponent = () => {
   }
 
   const ActiveModalComponent = activeModal?.ModalComponent || null
+  const isImageModal = activeModal?.type === 'image'
 
   const closeButton = (
-    <SCloseButton type="button" onClick={closeModal} aria-label="Close modal">
+    <SCloseButton type="button" onClick={closeModal} aria-label="Close modal" style={{'margin-top' : isImageModal ? '20px' : '0px'}}>
       ✕
     </SCloseButton>
   )
@@ -34,11 +45,22 @@ const ModalLoaderComponent = () => {
       <MulticlickButtonWrapper onOpenModal={openModalFromButton} />
 
       {
-        ActiveModalComponent ? (
+        activeModal ? (
           <SModalBackdrop onClick={closeModal}>
-            <SModalPanel onClick={(event) => event.stopPropagation()}>
-              <ActiveModalComponent headerSlot={closeButton} />
-            </SModalPanel>
+            {
+              isImageModal ? (
+                <SImageModalPanel onClick={(event) => event.stopPropagation()}>
+                  {closeButton}
+                  <SImageLink href={activeModal.imageSrc} target="_blank" rel="noreferrer" aria-label="Open image in new tab">
+                    <SImagePreview src={activeModal.imageSrc} alt={activeModal.title || 'Image preview'} />
+                  </SImageLink>
+                </SImageModalPanel>
+              ) : (
+                <SModalPanel onClick={(event) => event.stopPropagation()}>
+                  <ActiveModalComponent headerSlot={closeButton} />
+                </SModalPanel>
+              )
+            }
           </SModalBackdrop>
         ) : null
       }
@@ -78,7 +100,35 @@ const SModalPanel = styled.div`
   }
 `
 
+const SImageModalPanel = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+`
+
+const SImageLink = styled.a`
+  display: inline-flex;
+`
+
+const SImagePreview = styled.img`
+  max-width: calc(100vw - 80px);
+  max-height: calc(100vh - 80px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+  cursor: zoom-in;
+`
+
 const SCloseButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
   border: none;
   border-radius: 8px;
   padding: 8px 12px;

@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import LinkIcon from './LinkIcon'
-import { isModalType } from '../services/modal.service'
+import { isImageType, isModalType } from '../services/modal.service'
 
 const MulticlickButton = ({ item, defaultColor, defaultTextColor, onOpenModal }) => {
   const renderEntry = (entry, key, withIcon = false) => {
     const isModalEntry = isModalType(entry?.type)
+    const isImageEntry = isImageType(entry?.type)
 
-    if (isModalEntry) {
+    if (isModalEntry || isImageEntry) {
       return (
         <button key={key} type="button" onClick={() => onOpenModal?.(entry)}>
           {
