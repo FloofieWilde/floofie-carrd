@@ -6,13 +6,22 @@ import { ReactSVG } from "react-svg";
 
 const LinkIcon = ({ item }) => {
     const Icon = getIcon(item.icon);
+    const hasLink = Boolean(item?.link);
+    const tooltipId = item?.icon ? `tt-${item.icon}` : undefined;
 
     return (
-        <SLinkIcon href={item.link} target="_blank" data-tooltip-id={'tt' + item.icon} data-tooltip-content={item.title}>
+        <SLinkIcon
+            as={hasLink ? 'a' : 'span'}
+            href={hasLink ? item.link : undefined}
+            target={hasLink ? '_blank' : undefined}
+            rel={hasLink ? 'noreferrer' : undefined}
+            data-tooltip-id={tooltipId}
+            data-tooltip-content={item.title}
+        >
             {Icon && !(typeof Icon === "string") && <Icon alt={item.title} style={{ color: item.color }} />}
             {Icon && typeof Icon === "string" && <ReactSVG src={Icon} style={{ color: item.color }} />}
             {!Icon && <SImgIcon src={item.icon} alt={item.title} />}
-            <Tooltip id={'tt' + item.icon} />
+            {tooltipId && <Tooltip id={tooltipId} />}
         </SLinkIcon>
     );
 }

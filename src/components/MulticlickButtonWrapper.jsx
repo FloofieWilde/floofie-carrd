@@ -33,6 +33,10 @@ const SMulticlickButtonWrapper = styled.div`
     width: 100%;
     gap: 10px;
     box-sizing: border-box;
+
+    >* {
+      height: fill-available;
+    }
 `
 
 export default MulticlickButtonWrapper

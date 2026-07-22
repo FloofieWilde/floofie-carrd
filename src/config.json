@@ -28,10 +28,10 @@
             "color": "#20a4e5"
         },
         {
-            "title": "Commissions - Trello",
-            "icon": "FaTrello",
-            "link": "https://trello.com/b/mx5urtE6/commissions-floofie-projets",
-            "color": "blue"
+            "title": "Instagram - Floofie Wilde",
+            "icon": "FaInstagram",
+            "link": "https://www.instagram.com/floofiewilde",
+            "color": "#e20d73"
         },
         {
             "title": "VrChat",
@@ -64,16 +64,16 @@
             "color": "#1e9de8"
         },
         {
-            "title": "Floofie Wilde - Bluesky",
-            "icon": "BsBluesky",
-            "link": "https://bsky.app/profile/floofiewilde.bsky.social",
-            "color": "#1082f6"
-        },
-        {
             "title": "Prince Lucario - Special Twitter",
             "icon": "BsTwitterX",
             "link": "https://x.com/Prince_Lucario",
             "color": "black"
+        },
+        {
+            "title": "Floofie Wilde - Bluesky",
+            "icon": "BsBluesky",
+            "link": "https://bsky.app/profile/floofiewilde.bsky.social",
+            "color": "#1082f6"
         },
         {
             "title": "Tiktok - Soon to be used",

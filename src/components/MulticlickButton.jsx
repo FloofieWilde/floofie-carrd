@@ -77,6 +77,7 @@ const SMulticlickButton = styled.div`
       justify-content: center;
       gap: 4px;
       height: 100%;
+      max-height: 54px;
       box-sizing: border-box;
 
       text-decoration: none;
