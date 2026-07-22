@@ -35,7 +35,7 @@ const ModalLoaderComponent = () => {
   const isImageModal = activeModal?.type === 'image'
 
   const closeButton = (
-    <SCloseButton type="button" onClick={closeModal} aria-label="Close modal" style={{'margin-top' : isImageModal ? '20px' : '0px'}}>
+    <SCloseButton type="button" onClick={closeModal} aria-label="Close modal" style={ isImageModal ? {'position': 'absolute', 'right': '20px', 'top' : '40px'} : {}}>
       ✕
     </SCloseButton>
   )
@@ -76,17 +76,14 @@ const SModalBackdrop = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 50;
+  backdrop-filter: blur(8px);
 `
 
 const SModalPanel = styled.div`
   width: min(960px, 100%);
   max-height: 90vh;
   border-radius: 16px;
-  background: linear-gradient(
-    180deg,
-    ${config.theme.background}f2 0%,
-    ${config.theme.background}ff 100%
-  );
+  background: ${config.theme.background};
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
   overflow-y: auto;
   overflow-x: hidden;
@@ -98,6 +95,8 @@ const SModalPanel = styled.div`
   * {
     box-sizing: border-box;
   }
+
+  backdrop-filter: blur(8px);
 `
 
 const SImageModalPanel = styled.div`
@@ -126,9 +125,6 @@ const SImagePreview = styled.img`
 `
 
 const SCloseButton = styled.button`
-  position: absolute;
-  top: 20px;
-  right: 20px;
   border: none;
   border-radius: 8px;
   padding: 8px 12px;
@@ -136,17 +132,17 @@ const SCloseButton = styled.button`
   cursor: pointer;
   color: ${config.theme.text};
   background: linear-gradient(
-    90deg,
-    ${config.theme.primary}22 0%,
-    ${config.theme.secondary}22 100%
+    45deg,
+    ${config.theme.primary}cc 0%,
+    ${config.theme.secondary}cc 100%
   );
-  transition: background 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 
   &:hover {
     background: linear-gradient(
-      -90deg,
-      ${config.theme.primary}22 0%,
-      ${config.theme.secondary}22 100%
+      -135deg,
+      ${config.theme.primary}cc 0%,
+      ${config.theme.secondary}cc 100%
     );
   }
 `

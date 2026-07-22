@@ -265,8 +265,8 @@ const TemporaryTOSModal = ({ headerSlot }) => {
           <SActionButton type="button" onClick={toggleLanguage}>{isFrench ? 'EN' : 'FR'}</SActionButton>
           <SActionButton type="button" onClick={openAllSections}>{isFrench ? 'Tout ouvrir' : 'Open all'}</SActionButton>
           <SActionButton type="button" onClick={collapseAllSections}>{isFrench ? 'Tout fermer' : 'Collapse all'}</SActionButton>
+          <div>{headerSlot}</div>
         </SControls>
-        {headerSlot}
       </SHeaderRow>
 
       {terms.map((section) => (
